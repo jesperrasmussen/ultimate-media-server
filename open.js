@@ -1,6 +1,6 @@
 var open = require('open');
 var reg = /(:[\d]+)|(tcp:\/\/)/ig;
-var address = (process.env.DOCKER_HOST || '').replace(reg, '') || 'ultimate.media.server';
+var address = (process.env.DOCKER_HOST || '').replace(reg, '') || 'mediaserver';
 
 
 var basePath = 'http://' + address;
@@ -8,9 +8,7 @@ var appPaths = [
   ':8080',
   ':8081',
   ':5050',
-  ':5051',
-  ':8091',
-  ':32400/web'
+  ':5051'
 ];
 
 if(!!process.env.NO_OPEN) {

@@ -12,7 +12,7 @@ var cfgPath = path.join(projRoot, 'build/docker/docker-compose.json');
 var dcPath = path.join(projRoot, 'docker-compose.yml');
 
 var regDA = /(:[\d]+)|(tcp:\/\/)/ig;
-var umsName = 'ultimate.media.server';
+var umsName = 'mediaserver';
 var dockerAddress = (process.env.DOCKER_HOST || '').replace(regDA, '') || umsName;
 
 var fileContents;
