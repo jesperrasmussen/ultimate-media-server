@@ -15,6 +15,7 @@
     "volumes": [
       "./configs/sabnzbd:/config",
       "./temp/download:/incomplete",
+      "./temp/complete:/complete",
       "./temp/complete/TV:/tv",
       "./temp/complete/Movies:/movies"
     ],
