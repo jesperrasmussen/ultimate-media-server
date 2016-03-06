@@ -27,5 +27,26 @@
       "0.0.0.0:localhost"
     ],
     "restart": "always"
+  },
+  "sickgear": {
+    "image": "ressu/sickgear",
+    "volumes_from": [
+      "shares"
+    ],
+    "volumes": [
+      "./configs/sickgear:/data",
+      "./temp/complete/TV:/incoming",
+      "./media/TV:/tv"
+    ],
+    "links": [
+      "sabnzbd"
+    ],
+    "ports": [
+      "8081:8081"
+    ],
+    "extra_hosts": [
+      "0.0.0.0:localhost"
+    ],
+    "restart": "always"
   }
 }
