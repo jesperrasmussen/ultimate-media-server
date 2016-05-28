@@ -71,7 +71,6 @@
     ],
     "links": [
       "sabnzbd",
-      "transmission"
     ],
     "ports": [
       "5050:5050"
