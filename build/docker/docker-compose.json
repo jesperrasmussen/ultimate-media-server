@@ -36,7 +36,7 @@
     "volumes": [
       "./configs/sickgear:/data",
       "./temp/complete/TV:/incoming",
-      "./media/TV:/tv"
+      "./media/TV:/media/TV"
     ],
     "links": [
       "sabnzbd"
