@@ -2,13 +2,14 @@
   "shares": {
     "image": "tianon/true",
     "volumes": [
-      "./media:/data",
       "./configs:/configs",
+      "/etc/localtime:/etc/localtime:ro",
+      "./media:/data",
       "./temp:/temp"
     ]
   },
   "sabnzbd": {
-    "image": "timhaak/sabnzbd",
+    "image": "linuxserver/sabnzbd",
     "volumes_from": [
       "shares"
     ],
@@ -18,6 +19,11 @@
       "./temp/complete:/complete",
       "./temp/complete/TV:/tv",
       "./temp/complete/Movies:/movies"
+    ],
+    "environment": [
+      "PUID=0",
+      "PGID=0",
+      "TZ=Europe/Copenhagen"
     ],
     "ports": [
       "8080:8080",
@@ -43,6 +49,37 @@
     ],
     "ports": [
       "8081:8081"
+    ],
+    "environment": [
+      "TZ=Europe/Copenhagen"
+    ],
+    "extra_hosts": [
+      "0.0.0.0:localhost"
+    ],
+    "restart": "always"
+  },
+  "couchpotato": {
+    "image": "linuxserver/couchpotato",
+    "volumes_from": [
+      "shares"
+    ],
+    "volumes": [
+      "./configs/couchpotato:/config",
+      "./configs/couchpotato/downloads:/downloads",
+      "./temp/movies/release:/completed",
+      "./media/Movies:/movies"
+    ],
+    "links": [
+      "sabnzbd",
+      "transmission"
+    ],
+    "ports": [
+      "5050:5050"
+    ],
+    "environment": [
+      "PUID=0",
+      "PGID=0",
+      "TZ=America/New_York"
     ],
     "extra_hosts": [
       "0.0.0.0:localhost"
