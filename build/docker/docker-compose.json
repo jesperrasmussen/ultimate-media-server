@@ -70,7 +70,7 @@
       "./media/Movies:/movies"
     ],
     "links": [
-      "sabnzbd",
+      "sabnzbd"
     ],
     "ports": [
       "5050:5050"
