@@ -35,7 +35,7 @@
     "restart": "always"
   },
   "sickgear": {
-    "image": "ressu/sickgear",
+    "image": "jesperrasmussen/sickgear-develop",
     "volumes_from": [
       "shares"
     ],
