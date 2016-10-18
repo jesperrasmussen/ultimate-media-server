@@ -21,8 +21,8 @@
       "./temp/complete/Movies:/movies"
     ],
     "environment": [
-      "PUID=0",
-      "PGID=0",
+      "PUID=1000",
+      "PGID=100",
       "TZ=Europe/Copenhagen"
     ],
     "ports": [
@@ -76,8 +76,8 @@
       "5050:5050"
     ],
     "environment": [
-      "PUID=0",
-      "PGID=0",
+      "PUID=1000",
+      "PGID=100",
       "TZ=Europe/Copenhagen"
     ],
     "extra_hosts": [
